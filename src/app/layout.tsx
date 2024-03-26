@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/react";
 
 const font = DM_Sans({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <Analytics />
           </ThemeProvider>
         </body>
       </html>
