@@ -1,6 +1,5 @@
-import ProfileForm from "@/components/forms/profile-form";
 import React from "react";
-import ProfilePicture from "./_components/profile-picture";
+
 import { db } from "@/lib/db";
 import { currentUser } from "@clerk/nextjs";
 
@@ -65,12 +64,6 @@ const Settings = async (props: Props) => {
             Add or update your information
           </p>
         </div>
-        <ProfilePicture
-          onDelete={removeProfileImage}
-          userImage={user?.profileImage || ""}
-          onUpload={uploadProfileImage}
-        />
-        <ProfileForm user={user} onUpdate={updateUserInfo} />
       </div>
     </div>
   );
